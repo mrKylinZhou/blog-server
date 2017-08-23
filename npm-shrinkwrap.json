@@ -371,7 +371,7 @@
         "isarray": {
           "version": "0.0.1",
           "from": "isarray@0.0.1",
-          "resolved": "http://registry.npm.taobao.org/isarray/download/isarray-0.0.1.tgz",
+          "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz",
           "dev": true
         },
         "readable-stream": {
@@ -383,7 +383,7 @@
         "string_decoder": {
           "version": "0.10.31",
           "from": "string_decoder@>=0.10.0 <0.11.0",
-          "resolved": "https://registry.npm.taobao.org/string_decoder/download/string_decoder-0.10.31.tgz",
+          "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz",
           "dev": true
         }
       }
@@ -1376,7 +1376,7 @@
     },
     "git-pre-hooks": {
       "version": "1.2.0",
-      "from": "git-pre-hooks@latest",
+      "from": "git-pre-hooks@>=1.2.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/git-pre-hooks/-/git-pre-hooks-1.2.0.tgz",
       "dev": true
     },
@@ -1418,7 +1418,7 @@
         },
         "string_decoder": {
           "version": "0.10.31",
-          "from": "string_decoder@~0.10.x",
+          "from": "string_decoder@>=0.10.0 <0.11.0",
           "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz",
           "dev": true
         },
@@ -1506,19 +1506,19 @@
     },
     "gulp": {
       "version": "3.9.1",
-      "from": "gulp@latest",
+      "from": "gulp@>=3.9.1 <4.0.0",
       "resolved": "http://registry.npm.taobao.org/gulp/download/gulp-3.9.1.tgz",
       "dev": true
     },
     "gulp-nodemon": {
       "version": "2.2.1",
-      "from": "gulp-nodemon@latest",
+      "from": "gulp-nodemon@>=2.2.1 <3.0.0",
       "resolved": "https://registry.npmjs.org/gulp-nodemon/-/gulp-nodemon-2.2.1.tgz",
       "dev": true
     },
     "gulp-shell": {
       "version": "0.6.3",
-      "from": "gulp-shell@latest",
+      "from": "gulp-shell@>=0.6.3 <0.7.0",
       "resolved": "http://registry.npm.taobao.org/gulp-shell/download/gulp-shell-0.6.3.tgz",
       "dev": true,
       "dependencies": {
@@ -1861,12 +1861,12 @@
     },
     "koa": {
       "version": "2.3.0",
-      "from": "koa@latest",
+      "from": "koa@>=2.3.0 <3.0.0",
       "resolved": "http://registry.npm.taobao.org/koa/download/koa-2.3.0.tgz"
     },
     "koa-body": {
       "version": "2.3.0",
-      "from": "koa-body@latest",
+      "from": "koa-body@>=2.3.0 <3.0.0",
       "resolved": "http://registry.npm.taobao.org/koa-body/download/koa-body-2.3.0.tgz"
     },
     "koa-compose": {
@@ -1893,17 +1893,17 @@
     },
     "koa-json": {
       "version": "2.0.2",
-      "from": "koa-json@latest",
+      "from": "koa-json@>=2.0.2 <3.0.0",
       "resolved": "http://registry.npm.taobao.org/koa-json/download/koa-json-2.0.2.tgz"
     },
     "koa-logger": {
       "version": "3.0.1",
-      "from": "koa-logger@latest",
+      "from": "koa-logger@>=3.0.1 <4.0.0",
       "resolved": "http://registry.npm.taobao.org/koa-logger/download/koa-logger-3.0.1.tgz"
     },
     "koa-router": {
       "version": "7.2.1",
-      "from": "koa-router@latest",
+      "from": "koa-router@>=7.2.1 <8.0.0",
       "resolved": "http://registry.npm.taobao.org/koa-router/download/koa-router-7.2.1.tgz",
       "dependencies": {
         "debug": {
@@ -2392,7 +2392,7 @@
         "isarray": {
           "version": "0.0.1",
           "from": "isarray@0.0.1",
-          "resolved": "http://registry.npm.taobao.org/isarray/download/isarray-0.0.1.tgz"
+          "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz"
         }
       }
     },
@@ -2590,7 +2590,7 @@
     },
     "request": {
       "version": "2.81.0",
-      "from": "request@latest",
+      "from": "request@>=2.81.0 <3.0.0",
       "resolved": "http://registry.npm.taobao.org/request/download/request-2.81.0.tgz",
       "dependencies": {
         "qs": {
@@ -2923,7 +2923,7 @@
         },
         "string_decoder": {
           "version": "0.10.31",
-          "from": "string_decoder@~0.10.x",
+          "from": "string_decoder@>=0.10.0 <0.11.0",
           "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz",
           "dev": true
         },
