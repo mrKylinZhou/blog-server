@@ -1,0 +1,31 @@
+{
+  "name": "blog_server",
+  "version": "1.0.0",
+  "description": "server for blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog",
+    "server",
+    "koa"
+  ],
+  "author": "zhouql",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.0.1",
+    "koa-router": "^7.2.1",
+    "request": "^2.81.0",
+    "require-all": "^2.2.0"
+  },
+  "devDependencies": {
+    "git-pre-hooks": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-shell": "^0.6.3"
+  }
+}
