@@ -9,14 +9,7 @@ const server = new Koa();
 
 const isDev = process.env.NODE_ENV === 'development';
 
-// 引入config
-let config;
-
-try {
-    config = require('./config/config.json');
-} catch (ex) {
-    throw new Error('Failed to start: can not find config file in "config/" directory.');
-}
+const config = require('./config/config.json');
 
 requireAll({
     dirname: path.join(__dirname, '/route'),
@@ -34,6 +27,6 @@ server.use(router.routes());
 server.listen(config.appPort, config.appHost);
 
 if (isDev) {
-    console.log('现在处于开发环境~~!\n');
+    console.log('现在处于开发环境~~!');
     console.log(`Koa server listener on ${config.appHost} : ${config.appPort}\n`);
 }
