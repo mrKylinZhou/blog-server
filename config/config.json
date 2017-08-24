@@ -1,5 +1,13 @@
 {
     "appName": "blog-server",
     "appHost": "127.0.0.1",
-    "appPort": "21335"
+    "appPort": "21335",
+    "db": {
+        "host": "",
+        "port": ""
+    },
+    "redis": {
+        "host": "",
+        "port": ""
+    }
 }
