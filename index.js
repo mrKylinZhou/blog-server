@@ -4,6 +4,7 @@ const router = require('koa-router')();
 const body = require('koa-body');
 const json = require('koa-json');
 const requireAll = require('require-all');
+const errorHandle = require('./lib/errorHandle');
 
 const server = new Koa();
 
@@ -19,8 +20,17 @@ requireAll({
     }
 });
 
+server.use(errorHandle);
 server.use(body());
 server.use(json());
+
+if (isDev) {
+    const reqTimeLogger = require('./lib/reqTimeLogger');
+    const logger = require('koa-logger');
+    server.use(logger());
+    server.use(reqTimeLogger);
+}
+
 server.use(router.routes());
 
 server.listen(config.appPort, config.appHost);
