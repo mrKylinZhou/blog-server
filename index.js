@@ -21,7 +21,6 @@ requireAll({
 
 server.use(body());
 server.use(json());
-
 server.use(router.routes());
 
 server.listen(config.appPort, config.appHost);
