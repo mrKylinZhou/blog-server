@@ -7,7 +7,9 @@ const serve = require('koa-static');
 const redis = require('koa-redis');
 const session = require('koa-generic-session');
 const requireAll = require('require-all');
-const errorHandle = require('./lib/errorHandle');
+const errorHandle = require('./lib/error-handle');
+const loginCheck = require('./lib/login-check');
+
 
 const app = new Koa();
 
@@ -44,10 +46,11 @@ requireAll({
 
 app.use(errorHandle);
 app.use(session(sessionConfig));
+app.use(loginCheck);
 app.use(body());
 app.use(json());
 if (isDev) {
-    const reqTimeLogger = require('./lib/reqTimeLogger');
+    const reqTimeLogger = require('./lib/req-time-logger');
     const logger = require('koa-logger');
     app.use(logger());
     app.use(reqTimeLogger);
