@@ -4,8 +4,8 @@
     "appPort": "21335",
     "keys": ["Kylin", "blog"],
     "db": {
-        "host": "",
-        "port": ""
+        "host": "127.0.0.1",
+        "port": "27017"
     },
     "redis": {
         "host": "127.0.0.1",
