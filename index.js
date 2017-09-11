@@ -46,7 +46,7 @@ requireAll({
 
 app.use(errorHandle);
 app.use(session(sessionConfig));
-app.use(loginCheck);
+// app.use(loginCheck);
 app.use(body());
 app.use(json());
 if (isDev) {
@@ -62,5 +62,5 @@ app.listen(config.appPort, config.appHost);
 
 if (isDev) {
     console.log('现在处于开发环境~~!');
-    console.log(`Koa server listener on ${config.appHost} : ${config.appPort}\n`);
+    console.log(`Koa server listener on ${config.appHost} : ${config.appPort}`);
 }
