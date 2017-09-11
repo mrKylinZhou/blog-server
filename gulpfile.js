@@ -9,7 +9,7 @@ gulp.task('start', () => {
     nodemon({
         script: './index.js',
         ext: 'js',
-        watch: ['./route/', './service', 'index.js'],
+        watch: ['./route/', './service', 'index.js', './db', './lib'],
         env: {
             NODE_ENV: 'development'
         }

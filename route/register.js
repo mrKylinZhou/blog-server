@@ -20,14 +20,8 @@ const register = async ctx => {
             password,
             email
         });
-        UserEntity.save((err, row) => {
-            console.log(err, row);
-            if (err) {
-                ctx.body = err;
-                return;
-            }
-            ctx.body = row;
-        });
+        const row = await UserEntity.save();
+        ctx.body = JSON.stringify(row);
     }
 };
 
