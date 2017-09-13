@@ -5,8 +5,7 @@
     "abbrev": {
       "version": "1.1.0",
       "from": "abbrev@>=1.0.0 <2.0.0",
-      "resolved": "https://registry.npm.taobao.org/abbrev/download/abbrev-1.1.0.tgz",
-      "dev": true
+      "resolved": "https://registry.npm.taobao.org/abbrev/download/abbrev-1.1.0.tgz"
     },
     "accepts": {
       "version": "1.3.4",
@@ -2140,6 +2139,18 @@
       "from": "map-stream@>=0.1.0 <0.2.0",
       "resolved": "https://registry.npmjs.org/map-stream/-/map-stream-0.1.0.tgz",
       "dev": true
+    },
+    "markdown": {
+      "version": "0.5.0",
+      "from": "markdown@latest",
+      "resolved": "https://registry.npmjs.org/markdown/-/markdown-0.5.0.tgz",
+      "dependencies": {
+        "nopt": {
+          "version": "2.1.2",
+          "from": "nopt@>=2.1.1 <2.2.0",
+          "resolved": "https://registry.npmjs.org/nopt/-/nopt-2.1.2.tgz"
+        }
+      }
     },
     "media-typer": {
       "version": "0.3.0",
