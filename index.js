@@ -9,7 +9,7 @@ const session = require('koa-generic-session');
 const requireAll = require('require-all');
 const errorHandle = require('./lib/error-handle');
 const loginCheck = require('./lib/login-check');
-
+const colors = require('./service/colors');
 
 const app = new Koa();
 
@@ -33,7 +33,7 @@ sessionConfig.store = redis({
 });
 
 sessionConfig.store.on('error', error => {
-    console.error(error);
+    console.log(`${error}`.error);
 });
 
 requireAll({
@@ -61,6 +61,6 @@ app.use(router.routes());
 app.listen(config.appPort, config.appHost);
 
 if (isDev) {
-    console.log('现在处于开发环境~~!');
-    console.log(`Koa server listener on ${config.appHost} : ${config.appPort}`);
+    console.log('现在处于开发环境~~!'.info);
+    console.log(`Koa server listener on ${config.appHost} : ${config.appPort}`.info);
 }

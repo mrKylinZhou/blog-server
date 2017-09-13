@@ -12,11 +12,11 @@ mongoose.connect(dbUrl, {
 const db = mongoose.connection;
 
 db.on('error', err => {
-    console.error(`发生错误啦 : ${err}`);
+    console.log(`发生错误啦 : ${err}`.error);
 });
 
 db.once('open', () => {
-    console.info('连接数据库成功');
+    console.log('连接数据库成功'.help);
 })
 
 module.exports = mongoose;
