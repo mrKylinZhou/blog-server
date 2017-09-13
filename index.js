@@ -9,6 +9,7 @@ const session = require('koa-generic-session');
 const requireAll = require('require-all');
 const errorHandle = require('./lib/error-handle');
 const loginCheck = require('./lib/login-check');
+const baAuth = require('./lib/ba-auth');
 const colors = require('./service/colors');
 
 const app = new Koa();
@@ -46,7 +47,8 @@ requireAll({
 
 app.use(errorHandle);
 app.use(session(sessionConfig));
-// app.use(loginCheck);
+app.use(loginCheck);
+app.use(baAuth);
 app.use(body());
 app.use(json());
 if (isDev) {
