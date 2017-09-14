@@ -20,7 +20,7 @@ const emailValidator = email => {
 
 const register = async ctx => {
     const { username, password, email } = ctx.request.body;
-    if (usernameValidator(username) && passwordValidator(password) && emailValidator(email)) {
+    if (!usernameValidator(username) || !passwordValidator(password) || !emailValidator(email)) {
         ctx.body = new ErrorRes({
             code: -1,
             msg: '非法注册'
