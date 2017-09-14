@@ -3076,6 +3076,11 @@
       "resolved": "http://registry.npm.taobao.org/v8flags/download/v8flags-2.1.1.tgz",
       "dev": true
     },
+    "validator": {
+      "version": "8.2.0",
+      "from": "validator@latest",
+      "resolved": "https://registry.npmjs.org/validator/-/validator-8.2.0.tgz"
+    },
     "vary": {
       "version": "1.1.1",
       "from": "vary@>=1.0.0 <2.0.0",
