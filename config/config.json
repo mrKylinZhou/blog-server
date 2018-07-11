@@ -1,15 +1,15 @@
 {
-    "appName": "blog",
-    "appHost": "127.0.0.1",
-    "appPort": "21335",
-    "keys": ["Kylin", "blog"],
-    "db": {
-        "host": "127.0.0.1",
-        "port": "27017",
-        "name": "blog"
-    },
-    "redis": {
-        "host": "127.0.0.1",
-        "port": "6379"
-    }
+  "appName": "blog",
+  "appHost": "127.0.0.1",
+  "appPort": "21335",
+  "keys": ["Kylin"],
+  "db": {
+    "host": "127.0.0.1",
+    "port": "27017",
+    "name": "blog"
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": "6379"
+  }
 }
