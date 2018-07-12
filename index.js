@@ -3,8 +3,6 @@ const path = require('path')
 const router = require('koa-router')()
 const body = require('koa-body')
 const json = require('koa-json')
-const redis = require('koa-redis')
-const session = require('koa-generic-session')
 const requireAll = require('require-all')
 const errorHandle = require('./lib/error-handle')
 const cors = require('./lib/cors')
@@ -15,23 +13,6 @@ const app = new Koa()
 const config = require('./config/config.json')
 
 app.keys = config.keys
-
-const sessionConfig = {
-  key: `${config.appName}.sid`,
-  prefix: `${config.appName}:sess:`,
-  cookie: {
-    domain: 'localhost'
-  }
-};
-
-sessionConfig.store = redis({
-  host: config.redis.host,
-  port: config.redis.port
-});
-
-sessionConfig.store.on('error', error => {
-  console.log(`${error}`)
-});
 
 requireAll({
   dirname: path.join(__dirname, '/route'),
@@ -44,7 +25,6 @@ requireAll({
 app.use(errorHandle)
 app.use(cors);
 // app.use(baAuth)
-app.use(session(sessionConfig))
 app.use(body())
 app.use(json())
 app.use(router.routes())
