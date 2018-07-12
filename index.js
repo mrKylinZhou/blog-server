@@ -7,6 +7,7 @@ const redis = require('koa-redis')
 const session = require('koa-generic-session')
 const requireAll = require('require-all')
 const errorHandle = require('./lib/error-handle')
+const cors = require('./lib/cors')
 // const baAuth = require('./lib/ba-auth')
 
 const app = new Koa()
@@ -19,7 +20,7 @@ const sessionConfig = {
   key: `${config.appName}.sid`,
   prefix: `${config.appName}:sess:`,
   cookie: {
-    domain: '.zhouqilin.cn'
+    domain: 'localhost'
   }
 };
 
@@ -41,12 +42,13 @@ requireAll({
 })
 
 app.use(errorHandle)
-app.use(session(sessionConfig))
+app.use(cors);
 // app.use(baAuth)
+app.use(session(sessionConfig))
 app.use(body())
 app.use(json())
 app.use(router.routes())
 
 app.listen(config.appPort, config.appHost)
 
-console.log(`Koa server listener on ${config.appHost} : ${config.appPort}`.info)
+console.log(`Koa server listener on ${config.appHost} : ${config.appPort}`)
