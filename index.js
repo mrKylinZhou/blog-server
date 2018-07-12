@@ -7,13 +7,9 @@ const redis = require('koa-redis')
 const session = require('koa-generic-session')
 const requireAll = require('require-all')
 const errorHandle = require('./lib/error-handle')
-const loginCheck = require('./lib/login-check')
-const baAuth = require('./lib/ba-auth')
-const colors = require('./service/colors')
+// const baAuth = require('./lib/ba-auth')
 
 const app = new Koa()
-
-const isDev = process.env.NODE_ENV === 'development'
 
 const config = require('./config/config.json')
 
@@ -33,34 +29,24 @@ sessionConfig.store = redis({
 });
 
 sessionConfig.store.on('error', error => {
-  console.log(`${error}`.error)
+  console.log(`${error}`)
 });
 
 requireAll({
   dirname: path.join(__dirname, '/route'),
   filter: /\.js$/,
   resolve(route) {
-      route(router)
+    route(router)
   }
 })
 
 app.use(errorHandle)
 app.use(session(sessionConfig))
-app.use(loginCheck)
-app.use(baAuth)
+// app.use(baAuth)
 app.use(body())
 app.use(json())
-if (isDev) {
-  const reqTimeLogger = require('./lib/req-time-logger')
-  const logger = require('koa-logger')
-  app.use(logger())
-  app.use(reqTimeLogger)
-}
 app.use(router.routes())
 
 app.listen(config.appPort, config.appHost)
 
-if (isDev) {
-  console.log('现在处于开发环境~~!'.info)
-  console.log(`Koa server listener on ${config.appHost} : ${config.appPort}`.info)
-}
+console.log(`Koa server listener on ${config.appHost} : ${config.appPort}`.info)

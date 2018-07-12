@@ -1,7 +1,7 @@
 {
   "appName": "blog",
   "appHost": "127.0.0.1",
-  "appPort": "21335",
+  "appPort": "3333",
   "keys": ["Kylin"],
   "db": {
     "host": "127.0.0.1",
