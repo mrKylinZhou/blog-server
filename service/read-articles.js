@@ -24,7 +24,9 @@ const readDir = path => {
  */
 const main = async () => {
   const files = await readDir(dirPath);
-  return files.filter(file => /\.md$/.test(file))
+  return files
+    .filter(file => /\.md$/.test(file))
+    .map(file => file.replace(/\.md$/, ''))
 }
 
 module.exports = main

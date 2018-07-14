@@ -1,6 +1,6 @@
 module.exports = class Success {
-  constructor({ code, msg }) {
+  constructor({ code, data }) {
     this.code = code
-    this.msg = msg
+    this.data = data
   }
 }
