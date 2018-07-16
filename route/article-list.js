@@ -1,13 +1,20 @@
 const readArticles = require('../service/read-articles')
 const Success = require('../models/success')
+const Error = require('../models/error')
 
 const GetArticles = async ctx => {
-  const articles = await readArticles()
-  console.log(articles)
-  ctx.body = new Success({
-    code: 0,
-    data: articles
-  })
+  try {
+    const articles = await readArticles()
+    ctx.body = new Success({
+      code: 0,
+      data: articles
+    })
+  } catch(e) {
+    ctx.body = new Error({
+      code: -1,
+      msg: e.message
+    })
+  }
 }
 
 module.exports = router => {
