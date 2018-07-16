@@ -6,6 +6,7 @@ const json = require('koa-json')
 const requireAll = require('require-all')
 const errorHandle = require('./lib/error-handle')
 const cors = require('./lib/cors')
+const resolveOptions = require('./lib/resolve-options')
 // const baAuth = require('./lib/ba-auth')
 
 const app = new Koa()
@@ -23,7 +24,8 @@ requireAll({
 })
 
 app.use(errorHandle)
-app.use(cors);
+app.use(cors)
+app.use(resolveOptions)
 // app.use(baAuth)
 app.use(body())
 app.use(json())
