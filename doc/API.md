@@ -1,0 +1,2 @@
+- /api/articles 获取文章列表
+- /api/article/:name 获取某篇文章的详细信息

@@ -4,7 +4,6 @@ const Error = require('../models/error')
 
 const GetArticle = async ctx => {
   const name = ctx.params.name;
-  console.log(name)
   try {
     const article = await readArticle(name)
     ctx.body = new Success({
