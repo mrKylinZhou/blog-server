@@ -33,4 +33,4 @@ app.use(router.routes())
 
 app.listen(config.appPort, config.appHost)
 
-console.log(`Koa server listener on ${config.appHost} : ${config.appPort}`)
+console.log(`Koa server listener on ${config.appHost}:${config.appPort}`)
